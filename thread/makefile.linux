@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS1 = -lcrypto -ldl -lpthread -lrt -O0
+CFLAGS2 = -I/usr/local/ssl/include -L/usr/local/ssl/lib -lcrypto -ldl -lrt -O0 -lpthread
+
+all: main1
+
+main1: linThread.c
+	$(CC) $^ -o $@ $(CFLAGS1)
+
+main2: linThread.c
+	$(CC) $^ -o $@ $(CFLAGS2)

@@ -1,0 +1,8 @@
+CFLAGS = /nologo /MT /W3 /EHsc /O2
+LDFLAGS = kernel32.lib gdi32.lib lib\libeay32.lib /nologo /subsystem:console /machine:I386
+
+all: main
+
+main:
+        cl $(CFLAGS) winThread.cpp   \
+        /link $(LDFLAGS) /out:winThread.exe
