@@ -42,3 +42,9 @@ Third way,
 `long int uses = 1000000 * (tend.tv_sec - tstart.tv_sec) + (tend.tv_usec - tstart.tv_usec);`
 `printf("loop time: %lld\n", uses); `
 
+struct timeval tstart, tend;
+gettimeofday(&tstart, NULL);
+gettimeofday(&tend, NULL);
+long int uses = 1000000 * (tend.tv_sec - tstart.tv_sec) + (tend.tv_usec - tstart.tv_usec);
+printf("loop time: %lld\n", uses); 
+
