@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title>FlippingBitsDiv2</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15701&amp;pm=12731">FlippingBitsDiv2</a></h1>
+
+<p><em>Single Round Match 589 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Goose Tattarrattat has a sequence B of bits.
+Tattarrattat also has a favorite positive integer <em>M</em>.
+<em>M</em> divides the number of bits in B.</p>
+
+<p>Tattarrattat wants to have a sequence in which all the bits are 1s.
+She will produce such a sequence in a sequence of steps.
+In each step she can do one of the following three types of changes to the sequence:</p>
+
+<p>Flip any bit (from 1 to 0 or from 0 to 1).
+Flip the first k<strong>M* bits, for any positive integer k.
+Flip the last k</strong>M* bits, for any positive integer k.</p>
+
+<p>For example, suppose that B="110100001001" and <em>M</em>=4.
+There are 17 different sequences Tattarrattat can produce from this B in a single step.
+Among those sequences are "100100001001" (flipped the second bit), "001011111001" (flipped the first 2<em><em>M</em> bits), and "110100000110" (flipped the last </em>M* bits).</p>
+
+<p>You are given a String[] <em>S</em> and the int <em>M</em>.
+Concatenate all elements of <em>S</em> to obtain one long String.
+This String will represent the sequence B: each of its characters will be either '0' or '1'.
+Return the minimal number of steps required to obtain a sequence that consists of 1s only.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>FlippingBitsDiv2</code></li>
+<li><em>Method</em>: <code>getmin</code></li>
+<li><em>Parameters</em>: <code>String[], int</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int getmin(String[] S, int M)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>S</em> will contain between 1 and 50 elements, inclusive.</li>
+<li>Each element of <em>S</em> will contain between 1 and 50 characters, inclusive.</li>
+<li>Each character in each element of <em>S</em> will be '0' or '1'.</li>
+<li><em>M</em> will be between 1 and 2500.</li>
+<li><em>M</em> will be a divisor of N, where N is the number of characters in <em>S</em>.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>["00111000"],<br />1</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h4>Reason</h4>
+
+<p>There are several optimal solutions.
+For example, she can flip the first 5<em>1 bits (obtaining "11000000") and then the last 6</em>1 bits (obtaining "11111111").
+Another solution: she can flip the first 2<em>1 bits (obtaining "11111000") and then the last 3</em>1 bits (obtaining "11111111").</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>["00111000"],<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>3</c></p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>["111111"],<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h4>Reason</h4>
+
+<p>This sequence already consists of 1s only, so no steps are necessary.</p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>["00100"],<br />5</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>["00010","11010110","1010111","110001010","0110001100"<br />,"000110110","011010101","00","111","100"],<br />13</c></p>
+
+<h4>Output</h4>
+
+<p><c>31</c></p>
+
+<h4>Reason</h4>
+
+<p>Don't forget to concatenate the elements of <em>S</em>.</p>
+
+</body>
+</html>

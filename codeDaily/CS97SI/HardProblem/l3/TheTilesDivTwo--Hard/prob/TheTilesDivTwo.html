@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>TheTilesDivTwo</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15495&amp;pm=12501">TheTilesDivTwo</a></h1>
+
+<p><em>Single Round Match 575 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>John and Brus have a rectangular chessboard with black and white tiles.
+Rows and columns of the chessboard are numbered starting from 0.
+The cell at row i, column j is black if i+j is even and it is white if i+j is odd.</p>
+
+<p>Some of the cells of the chessboard are occupied by chess pieces.
+You are given a String[] <em>board</em>.
+For each i and j, the j-th character of the i-th element (0-based indices) of <em>board</em> is 'X' if the cell in row i, column j of the chessboard contains a chess piece.
+Otherwise, the j-th character of the i-th element of <em>board</em> is '.'.</p>
+
+<p>John and Brus also have an infinite supply of L-shaped tiles.
+Each tile consists of three squares which are of the same size as the cells of the chessboard.
+I.e., each tile looks as follows:
+OO
+O</p>
+
+<p>John and Brus want to place some of the tiles onto their chessboard, according to the following rules:
+Each tile may be rotated by any multiple of 90 degrees.
+Each tile must cover exactly three cells of the chessboard.
+Tiles are not allowed to overlap.
+Tiles are not allowed to cover the cells that are already occupied by the chess pieces.
+The corner cell of each tile must cover a black cell of the chessboard.</p>
+
+<p>Return the maximum number of tiles John and Brus can place on the board according to the above rules.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>TheTilesDivTwo</code></li>
+<li><em>Method</em>: <code>find</code></li>
+<li><em>Parameters</em>: <code>String[]</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int find(String[] board)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>board</em> will contain between 1 and 4 elements, inclusive.</li>
+<li>Each element of <em>board</em> will contain between 1 and 47 characters, inclusive.</li>
+<li>All elements of <em>board</em> will contain the same number of characters.</li>
+<li>Each element of <em>board</em> will consist of only characters 'X' and '.'.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>["X.X",<br /> "...",<br /> "X.X"]</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>Since only one black cell is available, just one tile can be placed on the board.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>["...",<br /> "...",<br /> "..."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>["......X.X.XXX.X.XX."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>["X.....XXX.XX..XXXXXXXXX...X.XX.XX....X",<br /> ".XXXX..X..XXXXXXXX....XX.X.X.X.....XXX",<br /> "....XX....X.XX..X.X...XX.X..XXXXXXX..X",<br /> "XX.XXXXX.X.X..X..XX.XXX..XX...XXX.X..."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>13</c></p>
+
+</body>
+</html>

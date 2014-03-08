@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>HyperKnight</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15181&amp;pm=12201">HyperKnight</a></h1>
+
+<p><em>Single Round Match 559 Round 1 - Division I, Level One</em></p>
+
+<h2>Statement</h2>
+
+<p>Fernando loves to play chess. One day he decided to play chess on an unusually large rectangular board. To compensate for the board's size he also decided to change the distance a knight can move in a single jump.</p>
+
+<p>To describe the moves easily, we will now introduce a coordinate system. Each cell of the chessboard can be described using two integers (r,c): its row number and its column number. Now, if we have a piece at (r,c), the move (x,y) takes the piece to the cell (r+x,c+y).</p>
+
+<p>The new chess piece will be called an (<em>a</em>,<em>b</em>)-hyperknight. The hyperknight always has 8 possible moves: (+<em>a</em>,+<em>b</em>), (+<em>a</em>,-<em>b</em>), (-<em>a</em>,+<em>b</em>), (-<em>a</em>,-<em>b</em>), (+<em>b</em>,+<em>a</em>), (+<em>b</em>,-<em>a</em>), (-<em>b</em>,+<em>a</em>), and (-<em>b</em>,-<em>a</em>). Note that the original chess knight is a (2,1)-hyperknight.</p>
+
+<p>Of course, as the chessboard is finite, it is not always possible to make each of the 8 moves. Some of them may cause our hyperknight to leave the chessboard. A move is called valid if the destination cell is on the chessboard. Fernando would like to know the number of cells on his board such that his hyperknight will have exactly <em>k</em> valid moves from that cell.</p>
+
+<p>You are given the ints <em>a</em>, <em>b</em>, <em>numRows</em>, <em>numColumns</em> and <em>k</em>. The values <em>numRows</em> and <em>numColumns</em> define the number of rows and number of columns on the chessboard, respectively. The other three values were already explained above. Compute and return the number of cells on the chessboard that have exactly <em>k</em> valid (<em>a</em>,<em>b</em>)-hyperknight moves.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>HyperKnight</code></li>
+<li><em>Method</em>: <code>countCells</code></li>
+<li><em>Parameters</em>: <code>int, int, int, int, int</code></li>
+<li><em>Returns</em>: <code>long</code></li>
+<li><em>Method signature</em>: <code>long countCells(int a, int b, int numRows, int numColumns, int k)</code></li>
+</ul>
+
+
+<h2>Notes</h2>
+
+<ul>
+<li>If you wish, you may assume that the rows are numbered 0 through <em>numRows</em>-1 and columns 0 through <em>numColumns</em>-1. However, note that the actual row/column numbers do not matter, as long as they are consecutive.</li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>a</em> will be between 1 and 1,000,000,000 (10<sup>9</sup>), inclusive.</li>
+<li><em>b</em> will be between 1 and 1,000,000,000 (10<sup>9</sup>), inclusive.</li>
+<li><em>a</em> will not be equal to <em>b</em>.</li>
+<li><em>numRows</em> will be between 1 and 1,000,000,000 (10<sup>9</sup>), inclusive.</li>
+<li><em>numColumns</em> will be between 1 and 1,000,000,000 (10<sup>9</sup>), inclusive.</li>
+<li>2<em>max(</em>a<em>,</em>b<em>) will be strictly less than min(</em>numRows<em>,</em>numColumns*).</li>
+<li><em>k</em> will be between 0 and 8, inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>2,<br />1,<br />8,<br />8,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>20</c></p>
+
+<h4>Reason</h4>
+
+<p>This is a standard chessboard. We have a traditional chess knight and we are looking for cells such that the knight has exactly 4 valid moves.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>3,<br />2,<br />8,<br />8,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>16</c></p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />3,<br />7,<br />11,<br />0</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>3,<br />2,<br />10,<br />20,<br />8</c></p>
+
+<h4>Output</h4>
+
+<p><c>56</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />4,<br />100,<br />10,<br />6</c></p>
+
+<h4>Output</h4>
+
+<p><c>564</c></p>
+
+<h3>Example 6</h3>
+
+<h4>Input</h4>
+
+<p><c>2,<br />3,<br />1000000000,<br />1000000000,<br />8</c></p>
+
+<h4>Output</h4>
+
+<p><c>999999988000000036</c></p>
+
+</body>
+</html>

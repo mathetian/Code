@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>LittleElephantAndXor</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15707&amp;pm=12623">LittleElephantAndXor</a></h1>
+
+<p><em>Single Round Match 595 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Little Elephant from the Zoo of Lviv likes integers.</p>
+
+<p>You are given three ints <em>A</em>, <em>B</em> and <em>C</em>. Return the number of ordered pairs (X,Y) of integers such that 0 &lt;= X &lt;= <em>A</em>, 0 &lt;= Y &lt;= <em>B</em>, and the value (X XOR Y) is less than or equal to <em>C</em>.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>LittleElephantAndXor</code></li>
+<li><em>Method</em>: <code>getNumber</code></li>
+<li><em>Parameters</em>: <code>int, int, int</code></li>
+<li><em>Returns</em>: <code>long</code></li>
+<li><em>Method signature</em>: <code>long getNumber(int A, int B, int C)</code></li>
+</ul>
+
+
+<h2>Notes</h2>
+
+<ul>
+<li>XOR (exclusive or) is a binary operation, performed on two numbers in binary notation. First, the shorter number is prepended with leading zeroes until both numbers have the same number of digits (in binary). Then, the result is calculated as follows: for each bit where the numbers differ the result has 1 in its binary representation. It has 0 in all other positions.</li>
+<li>For example 42 XOR 7 is performed as follows. First, the numbers are converted to binary: 42 is 101010 and 7 is 111. Then the shorter number is prepended with leading zeros until both numbers have the same number of digits. This means 7 becomes 000111. Then 101010 XOR 000111 = 101101 (the result has ones only in the positions where the two numbers differ). Then the result can be converted back to decimal notation. In this case 101101 = 45, so 42 XOR 7 = 45.</li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>A</em>, <em>B</em> and <em>C</em> will each be between 1 and 1,000,000,000 (10<sup>9</sup>), inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>2,<br />2,<br />1</c></p>
+
+<h4>Output</h4>
+
+<p><c>5</c></p>
+
+<h4>Reason</h4>
+
+<p>There are 9 possible pairs in this case:
+0 XOR 0 = 0
+0 XOR 1 = 1
+0 XOR 2 = 2
+1 XOR 0 = 1
+1 XOR 1 = 0
+1 XOR 2 = 3
+2 XOR 0 = 2
+2 XOR 1 = 3
+2 XOR 2 = 0
+Among them, only 5 have XOR less than or equal to 1. Note that (0,1) and (1,0) are two different pairs.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>4,<br />7,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>20</c></p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>10,<br />10,<br />5</c></p>
+
+<h4>Output</h4>
+
+<p><c>57</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>774,<br />477,<br />447</c></p>
+
+<h4>Output</h4>
+
+<p><c>214144</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>1000000000,<br />1000000000,<br />500000000</c></p>
+
+<h4>Output</h4>
+
+<p><c>468566946385621507</c></p>
+
+</body>
+</html>

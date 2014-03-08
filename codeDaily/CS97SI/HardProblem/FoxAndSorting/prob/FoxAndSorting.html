@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>FoxAndSorting</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15037&amp;pm=11572">FoxAndSorting</a></h1>
+
+<p><em>Single Round Match 535 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Fox Jiro and Eel Saburo are good friends. Saburo uses a strange way to compare integers. Please help Jiro understand it.</p>
+
+<p>For a positive integer n, let d(n) be the sum of its digits in base 10. For example, d(407) = 4+0+7 = 11.</p>
+
+<p>When comparing two different integers x and y, Saburo first compares their sums of digits, i.e., the values d(x) and d(y). If they differ, the one with the smaller sum is smaller.
+For example, for Saburo 50 is smaller than 16, because d(50) &lt; d(16).</p>
+
+<p>If the numbers have the same sum of digits, Saburo compares them lexicographically (i.e., as strings).
+For example, for Saburo the number 111 is smaller than the number 3, because d(111) = d(3) and "111" &lt; "3".
+Also, the number 470 is smaller than 4700, because "470" &lt; "4700".</p>
+
+<p>Let A be the sequence of integers {0, 1, ..., 999999999999999998, 999999999999999999 (10<sup>18</sup> - 1)}.
+Let B be the sequence A, ordered according to Saburo's rules.
+You are given a long <em>idx</em>, representing a 1-based index into B.
+Return the corresponding element of B.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>FoxAndSorting</code></li>
+<li><em>Method</em>: <code>get</code></li>
+<li><em>Parameters</em>: <code>long</code></li>
+<li><em>Returns</em>: <code>long</code></li>
+<li><em>Method signature</em>: <code>long get(long idx)</code></li>
+</ul>
+
+
+<h2>Notes</h2>
+
+<ul>
+<li>Given two distinct strings A and B, we say that A is lexicographically smaller than B if either A is a prefix of B, or A has a smaller character than B on the first position on which they differ.</li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>idx</em> will be between 1 and 1,000,000,000,000,000,000 (10<sup>18</sup>), inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>10</c></p>
+
+<h4>Output</h4>
+
+<p><c>100000000</c></p>
+
+<h4>Reason</h4>
+
+<p>First 10 elements of B are: {0, 1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000}.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>1000000000000000000</c></p>
+
+<h4>Output</h4>
+
+<p><c>999999999999999999</c></p>
+
+<h4>Reason</h4>
+
+<p>The last element.</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>58</c></p>
+
+<h4>Output</h4>
+
+<p><c>100000000100</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>314159265358979</c></p>
+
+<h4>Output</h4>
+
+<p><c>646003042230121105</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>271828182845904523</c></p>
+
+<h4>Output</h4>
+
+<p><c>132558071125756493</c></p>
+
+</body>
+</html>

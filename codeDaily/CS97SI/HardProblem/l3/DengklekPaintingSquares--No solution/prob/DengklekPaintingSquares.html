@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>DengklekPaintingSquares</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=14725&amp;pm=11765">DengklekPaintingSquares</a></h1>
+
+<p><em>Single Round Match 532 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Mr. Dengklek lives in the Kingdom of Ducks, where humans and ducks live together in peace and harmony.</p>
+
+<p>One day, the queen of the kingdom challenged Mr. Dengklek with a perplexing puzzle: she gave Mr. Dengklek an <em>N</em> × <em>M</em> board made of wood that consists of <em>N</em><em>*M</em> squares. She then asked Mr. Dengklek to paint the squares according to these rules:</p>
+
+<p>Each square must be either colored or empty.
+Each colored square must have an even number of adjacent colored squares. Two squares are adjacent if they share a side.
+For example, here is one valid solution for N=4, M=7:</p>
+
+<p><img src="images/DengklekPaintingSquares_fig12.png" alt="image" /></p>
+
+<p>In the above image, black squares denote empty squares and brown squares denote colored squares.</p>
+
+<p>Of course, finding one solution to the puzzle is easy: we do not color anything. Instead, the queen asked Mr. Dengklek a much harder question: to count all valid solutions of the puzzle. Help Mr. Dengklek count the solutions and return the result modulo 1,000,000,007. Two solutions are different if there is a square that is colored in one solution and not colored in the other solution.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>DengklekPaintingSquares</code></li>
+<li><em>Method</em>: <code>numSolutions</code></li>
+<li><em>Parameters</em>: <code>int, int</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int numSolutions(int N, int M)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>N</em> will be between 1 and 100, inclusive.</li>
+<li><em>M</em> will be between 1 and 8, inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />1</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h4>Reason</h4>
+
+<p>Either Mr. Dengklek colors the square, or he does not. Both choices produce a valid solution.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>2,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>8</c></p>
+
+<h4>Reason</h4>
+
+<p>Here are the 8 valid solutions:</p>
+
+<p><img src="images/DengklekPaintingSquares_fig21.png" alt="image" /></p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>5</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>47,<br />7</c></p>
+
+<h4>Output</h4>
+
+<p><c>944149920</c></p>
+
+</body>
+</html>

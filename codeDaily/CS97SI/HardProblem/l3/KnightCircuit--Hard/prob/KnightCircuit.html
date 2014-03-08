@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>KnightCircuit</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15186&amp;pm=10966">KnightCircuit</a></h1>
+
+<p><em>Single Round Match 564 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>The (<em>a</em>,<em>b</em>)-knight is a chess piece that moves by jumping, just as a regular knight, but the jump is <em>a</em> cells in one direction, <em>b</em> in the other. Formally, an (<em>a</em>,<em>b</em>)-knight standing on the cell (x,y) can move to any of the following eight cells:
+(x+<em>a</em>,y+<em>b</em>), (x+<em>a</em>,y-<em>b</em>), (x-<em>a</em>,y+<em>b</em>), (x-<em>a</em>,y-<em>b</em>), (x+<em>b</em>,y+<em>a</em>), (x+<em>b</em>,y-<em>a</em>), (x-<em>b</em>,y+<em>a</em>), and (x-<em>b</em>,y-<em>a</em>).
+Of course, if the (<em>a</em>,<em>b</em>)-knight is close to the edge of the board, some of these cells might not be on the board.
+It is not allowed to jump to a cell that is not on the board.</p>
+
+<p>A knight circuit is a sequence of cells on a chess board that starts and ends with the same cell.
+Each consecutive pair of cells in the knight circuit must correspond to a single jump of the (<em>a</em>,<em>b</em>)-knight.
+The knight circuit may visit each cell arbitrarily many times.
+The size of a knight circuit is the number of different cells visited by the circuit.</p>
+
+<p>You are given the ints <em>w</em> and <em>h</em>: the width (in columns) and the height (in rows) of a rectangular chessboard. You are also given the ints <em>a</em> and <em>b</em>: the parameters of your knight. Return the maximum knight circuit size that can be obtained on the given board. You are free to choose any cell as the start of your circuit.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>KnightCircuit</code></li>
+<li><em>Method</em>: <code>maxSize</code></li>
+<li><em>Parameters</em>: <code>int, int, int, int</code></li>
+<li><em>Returns</em>: <code>long</code></li>
+<li><em>Method signature</em>: <code>long maxSize(int w, int h, int a, int b)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>w</em>, <em>h</em> will each be between 1 and 100000, inclusive.</li>
+<li><em>a</em> and <em>b</em> will each be between 1 and 10, inclusive.</li>
+<li><em>a</em> and <em>b</em> will not be equal.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />1,<br />2,<br />1</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>This is a 1x1 board. Note that a sequence that consists of a single cell is considered to be a valid knight circuit.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>3,<br />20,<br />1,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>11</c></p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>100000,<br />100000,<br />1,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>10000000000</c></p>
+
+<h4>Reason</h4>
+
+<p>It is possible to make a circuit that contains every cell on the board.</p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>3,<br />3,<br />1,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>8</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>30,<br />30,<br />8,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>64</c></p>
+
+<h3>Example 6</h3>
+
+<h4>Input</h4>
+
+<p><c>32,<br />34,<br />6,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>136</c></p>
+
+</body>
+</html>

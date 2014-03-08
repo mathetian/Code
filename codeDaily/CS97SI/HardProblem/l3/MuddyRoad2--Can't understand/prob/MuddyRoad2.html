@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>MuddyRoad2</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15177&amp;pm=12189">MuddyRoad2</a></h1>
+
+<p><em>Single Round Match 555 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Fox Ciel is going to walk along an unpaved road to her friend's house.
+For our purposes, the road can be considered a one-dimensional polyline consisting of <em>N</em> segments.
+The segments are numbered 0 through <em>N</em>-1 along the road.
+At the beginning, Ciel stands on the segment number 0.
+Her friend's house is on the segment number <em>N</em>-1.</p>
+
+<p>Unfortunately, yesterday it rained, so some segments of the road are now muddy.
+Ciel has new shoes, so she must only use the other, dry segments.
+She knows that segments 0 and <em>N</em>-1 are dry.
+The friend just called her and gave her two additional pieces of information:</p>
+
+<p>Out of the remaining <em>N</em>-2 segments, exactly <em>muddyCount</em> are muddy.
+There is an even number of ways how Ciel can get to the friend's house without stepping into the mud, while making steps of length at most 2.</p>
+
+<p>We will now explain the second information in more detail.
+When Ciel walks along the road, each of her steps has either length 1 or 2.
+A step of length 1 takes her from segment i to segment i+1.
+A step of length 2 takes her from segment i to segment i+2, skipping the (possibly, but not necessarily muddy) segment i+1.</p>
+
+<p>Fox Ciel would like to use the information she has to determine how the road looks like.
+Of course, there may be multiple configurations that match the information.
+It is also possible that her friend was mistaken and there is no sequence of dry and muddy segments that matches what she told Ciel.</p>
+
+<p>You are given the ints <em>N</em> and <em>muddyCount</em>.
+Count all the ways the road can look like, and return that count modulo 555,555,555.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>MuddyRoad2</code></li>
+<li><em>Method</em>: <code>theCount</code></li>
+<li><em>Parameters</em>: <code>int, int</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int theCount(int N, int muddyCount)</code></li>
+</ul>
+
+
+<h2>Notes</h2>
+
+<ul>
+<li>Zero (0) is also an even number. Hence, if Ciel cannot reach her friend's house without stepping into the mud, there is an even number of ways to reach the house.</li>
+<li>Two configurations of the road are different if some road segment is dry in one of them and muddy in the other.</li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>N</em> will be between 2 and 555, inclusive.</li>
+<li><em>muddyCount</em> will be between 0 and <em>N</em>-2, inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>5,<br />1</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h4>Reason</h4>
+
+<p>There are two possible configurations of the road:
+.#...
+and
+...#. (where '#' denotes a muddy segment and '.' a dry one).</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>5,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h4>Reason</h4>
+
+<p>Possible configurations:</p>
+
+<p>.##..
+and
+..##.</p>
+
+<p>Note that in these configurations, there are no ways to go from part 0 to part 4 without stepping onto any muddy parts. You have to count this kind of configurations too, since 0 is an even number.</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>10,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>65</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>314,<br />78</c></p>
+
+<h4>Output</h4>
+
+<p><c>498142902</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>555,<br />222</c></p>
+
+<h4>Output</h4>
+
+<p><c>541606281</c></p>
+
+</body>
+</html>

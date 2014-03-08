@@ -1,0 +1,171 @@
+<html>
+<head>
+    <title>FoxAndGo2</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15706&amp;pm=12809">FoxAndGo2</a></h1>
+
+<p><em>Single Round Match 594 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Fox Ciel is teaching her friend Jiro to play Go.
+Ciel has just placed some white tokens onto a board.
+She now wants Jiro to find the best possible sequence of moves.
+(This is defined more precisely below.)</p>
+
+<p>You are given a String[] <em>board</em>.
+Character j of element i of <em>board</em> represents the cell (i,j) of the board:
+'o' is a cell with a white token and '.' is an empty cell.
+At least one cell on the board will be empty. Note that there are currently no black tokens on the board.</p>
+
+<p>Each Jiro's move consists of adding a single black token to the board.
+The token must be placed onto an empty cell.
+Once Jiro places the token, some white tokens will be removed from the board according to the rules described in the next paragraphs.</p>
+
+<p>The tokens on the board can be divided into connected components using the following rules:
+If two tokens of the same color lie in cells that share an edge, they belong to the same component.
+Being in the same component is transitive: if X lies in the same component as Y and Y lies in the same component as Z, then X lies in the same component as Z.</p>
+
+<p>Note that each component of tokens is either completely white or completely black. Each component of tokens is processed separately.
+For each component we check whether it is adjacent to an empty cell.
+(That is, whether there are two cells that share an edge such that one of them is empty and the other contains a token from the component we are processing.)
+If there is such an empty cell, the component is safe and its tokens remain on the board.
+If there is no such empty cell, the component is killed and all its tokens are removed from the board.</p>
+
+<p>There are also the following additional rules:
+All white components must be processed before black ones (in any order).
+If at least one white token was removed, then black components must not be processed at all.
+Otherwise, all black components must be processed (in any order).
+If at least one black token was removed, this is called a "suicide move". Such moves are invalid and Jiro is not allowed to make them.</p>
+
+<p>Jiro's score is the total number of white tokens removed from the board after each of his moves is evaluated.
+Return the maximal score he can get for the given board.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>FoxAndGo2</code></li>
+<li><em>Method</em>: <code>maxKill</code></li>
+<li><em>Parameters</em>: <code>String[]</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int maxKill(String[] board)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li>n will be between 2 and 19, inclusive.</li>
+<li><em>board</em> will contain exactly n elements.</li>
+<li>Each element in <em>board</em> will contain exactly n characters.</li>
+<li>Each character in <em>board</em> will be 'o' or '.'.</li>
+<li>There will be at least 1 '.' in <em>board</em>.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>["...",<br /> ".o.",<br /> "..."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>.A.
+BoC
+.D.
+Jiro can put black pieces at A,B,C,D (in any order).</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>["o.",<br /> "oo"]</c></p>
+
+<h4>Output</h4>
+
+<p><c>3</c></p>
+
+<h4>Reason</h4>
+
+<p>Jiro needs to place the black token into the empty cell. After that, the white component becomes unsafe and will be killed. The black component won't be processed, so the black token will remain on board.</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>[".o.o.",<br /> "o.o.o",<br /> ".o.o.",<br /> "o.o.o",<br /> ".o.o."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h4>Reason</h4>
+
+<p>Regardless of which empty cell he chooses, he will never kill any white component with this single black token.
+On the other hand, his black token would always be killed.
+Therefore, Jiro has no valid move on this board.</p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>[".o.o.",<br /> "o.o.o",<br /> ".o.o.",<br /> "o.o.o",<br /> "....."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>10</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>[".o.o.o.o.o.",<br /> "o.ooo.ooo.o",<br /> ".o.......o.",<br /> "oo.......oo",<br /> ".o...o...o.",<br /> "o...o.o...o",<br /> ".o...o...o.",<br /> "oo.......oo",<br /> ".o.......o.",<br /> "o.ooo.ooo.o",<br /> ".o.o.o.o.o."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>4</c></p>
+
+<h3>Example 6</h3>
+
+<h4>Input</h4>
+
+<p><c>["...ooo.....",<br /> "...o.o.....",<br /> ".ooo.ooo...",<br /> ".o.....o...",<br /> ".ooo.ooo...",<br /> "...o.o.....",<br /> "...ooo.....",<br /> "....o......",<br /> "....o...ooo",<br /> "....ooooo.o",<br /> "........ooo"]</c></p>
+
+<h4>Output</h4>
+
+<p><c>38</c></p>
+
+<h3>Example 7</h3>
+
+<h4>Input</h4>
+
+<p><c>["ooooooooooo",<br /> "o.........o",<br /> "o...ooo...o",<br /> "o...o.o...o",<br /> "o...ooo...o",<br /> "o....o....o",<br /> "o....oooooo",<br /> "o..........",<br /> "o.......ooo",<br /> "o.......o.o",<br /> "ooooooooooo"]</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h4>Reason</h4>
+
+<p>Sometimes, making no moves at all is an optimal strategy.</p>
+
+<h3>Example 8</h3>
+
+<h4>Input</h4>
+
+<p><c>["oo.o.ooo.o..o..",<br /> "...ooo.o..oo.oo",<br /> "o..o.o.ooo.o..o",<br /> "oo.......oo.ooo",<br /> "..oo.o.o.o.ooo.",<br /> "..oo..oo..o.ooo",<br /> "oo.o.oo..o.oooo",<br /> ".oo.o..ooo.o.oo",<br /> "o..o.o.o.o.oo..",<br /> ".oo.oo...o....o",<br /> "o.o.oo....oo..o",<br /> ".o.o..o.oo..ooo",<br /> "o.o.o..o..o....",<br /> "ooo.oooooooo..o",<br /> "o..oo.o..o.ooo."]</c></p>
+
+<h4>Output</h4>
+
+<p><c>60</c></p>
+
+</body>
+</html>

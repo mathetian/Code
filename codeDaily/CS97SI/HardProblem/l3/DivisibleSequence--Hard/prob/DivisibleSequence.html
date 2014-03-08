@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>DivisibleSequence</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15187&amp;pm=12274">DivisibleSequence</a></h1>
+
+<p><em>Single Round Match 565 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>A divisible sequence with starting value <em>N</em> and length <em>H</em> is a sequence of positive integers with the following properties:
+The sequence has <em>H</em> elements, labeled A[0] through A[<em>H</em>-1].
+A[0] equals <em>N</em>.
+For each i between 0 and <em>H</em>-2, inclusive, A[i+1] divides A[i].</p>
+
+<p>You are given the ints <em>N</em> and <em>H</em>.
+Let C be the count of all divisible sequences with starting value <em>N</em> and length <em>H</em>.
+Return the value (C modulo 1,000,000,009).</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>DivisibleSequence</code></li>
+<li><em>Method</em>: <code>count</code></li>
+<li><em>Parameters</em>: <code>int, int</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int count(int N, int H)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>N</em> will be between 1 and 1,000,000,000, inclusive.</li>
+<li><em>H</em> will be between 1 and 1,000,000,000, inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>5,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>3</c></p>
+
+<h4>Reason</h4>
+
+<p>The three possible sequences are:</p>
+
+<p>5, 5, 5</p>
+
+<p>5, 5, 1</p>
+
+<p>5, 1, 1</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>6,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>9</c></p>
+
+<h4>Reason</h4>
+
+<p>The nine possible sequences are:</p>
+
+<p>6, 6, 6</p>
+
+<p>6, 6, 3</p>
+
+<p>6, 6, 2</p>
+
+<p>6, 6, 1</p>
+
+<p>6, 3, 3</p>
+
+<p>6, 3, 1</p>
+
+<p>6, 2, 2</p>
+
+<p>6, 2, 1</p>
+
+<p>6, 1, 1</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>10,<br />2</c></p>
+
+<h4>Output</h4>
+
+<p><c>4</c></p>
+
+<h4>Reason</h4>
+
+<p>A[1] can be equal to each of the divisors of the number 10. That is, A[1] can be 1, 2, 5, or 10.</p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />10000</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>The only possible sequence consists of all ones.</p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>30,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>64</c></p>
+
+<h3>Example 6</h3>
+
+<h4>Input</h4>
+
+<p><c>25883,<br />100000</c></p>
+
+<h4>Output</h4>
+
+<p><c>991000009</c></p>
+
+</body>
+</html>

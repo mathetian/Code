@@ -1,0 +1,135 @@
+<html>
+<head>
+    <title>FoxPaintingBalls</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15174&amp;pm=12146">FoxPaintingBalls</a></h1>
+
+<p><em>Single Round Match 552 Round 1 - Division I, Level One</em></p>
+
+<h2>Statement</h2>
+
+<p>A Ball Triangle is a set of identical balls placed in a triangular shape. A Ball Triangle has <em>N</em> rows, numbered 1 to <em>N</em> from top to bottom. For all i, 1 &lt;= i &lt;= <em>N</em>, the i-th row contains i balls. For example, the following image shows a Ball Triangle with <em>N</em>=3.</p>
+
+<p><img src="images/BallTrig-1.png" alt="image" /></p>
+
+<p>Fox Jiro has infinitely many Ball Triangles. He can paint a Ball Triangle according to the following conditions:</p>
+
+<p>Each of the balls has to be painted either red, green, or blue.
+No two adjacent balls may share the same color.</p>
+
+<p>The following image shows one valid coloring of a Ball Triangle for <em>N</em>=3.</p>
+
+<p><img src="images/BallTrig-2.png" alt="image" /></p>
+
+<p>Jiro wants to paint as many Ball Triangles as he can.
+As long as he follows the rules above, he may color the Ball Triangles in any way he likes.
+Some of the colored Ball Triangles may look exactly the same, but they don't have to.
+The only other constraint is the total amount of paint available to Jiro:
+In all the triangles together, he can paint at most <em>R</em> balls red, <em>G</em> balls green, and <em>B</em> balls blue.</p>
+
+<p>You are given the longs <em>R</em>, <em>G</em>, and <em>B</em>.
+You are also given the int <em>N</em>.
+Return the maximum possible number of Ball Triangles Jiro can paint.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>FoxPaintingBalls</code></li>
+<li><em>Method</em>: <code>theMax</code></li>
+<li><em>Parameters</em>: <code>long, long, long, int</code></li>
+<li><em>Returns</em>: <code>long</code></li>
+<li><em>Method signature</em>: <code>long theMax(long R, long G, long B, int N)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>R</em>, <em>G</em> and <em>B</em> will each be between 0 and 1,000,000,000,000,000,000 (10<sup>18</sup>), inclusive.</li>
+<li><em>N</em> will be between 1 and 1,000,000,000, inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>2,<br />2,<br />2,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>Jiro can paint one Ball Triangle in the same way as in the image in the statement.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />2,<br />3,<br />3</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h4>Reason</h4>
+
+<p>This time Jiro can paint no Ball Triangles.</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>8,<br />6,<br />6,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>7,<br />6,<br />7,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>2</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>100,<br />100,<br />100,<br />4</c></p>
+
+<h4>Output</h4>
+
+<p><c>30</c></p>
+
+<h3>Example 6</h3>
+
+<h4>Input</h4>
+
+<p><c>19330428391852493,<br />48815737582834113,<br />11451481019198930,<br />3456</c></p>
+
+<h4>Output</h4>
+
+<p><c>5750952686</c></p>
+
+<h3>Example 7</h3>
+
+<h4>Input</h4>
+
+<p><c>1,<br />1,<br />1,<br />1</c></p>
+
+<h4>Output</h4>
+
+<p><c>3</c></p>
+
+</body>
+</html>

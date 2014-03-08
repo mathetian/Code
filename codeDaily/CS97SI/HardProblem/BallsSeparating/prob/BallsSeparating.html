@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>BallsSeparating</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15488&amp;pm=12398">BallsSeparating</a></h1>
+
+<p><em>Single Round Match 568 Round 1 - Division I, Level One</em></p>
+
+<h2>Statement</h2>
+
+<p>There are <em>N</em> boxes numbered from 0 to <em>N</em>-1, inclusive. For each i, box i contains <em>red</em>[i] red balls, <em>green</em>[i] green balls, and <em>blue</em>[i] blue balls.</p>
+
+<p>Fox Ciel wants to separate the balls by colors. In each operation, she can pick a single ball from some box and put it into another box. She considers the balls to be separated if no box contains balls of more than one color.</p>
+
+<p>Return the minimal number of operations required to separate the balls. If this is impossible, return -1.</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>BallsSeparating</code></li>
+<li><em>Method</em>: <code>minOperations</code></li>
+<li><em>Parameters</em>: <code>int[], int[], int[]</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int minOperations(int[] red, int[] green, int[] blue)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>red</em>, <em>green</em> and <em>blue</em> will each contain between 1 and 50 elements, inclusive.</li>
+<li><em>red</em>, <em>green</em> and <em>blue</em> will contain the same number of elements.</li>
+<li>Each element of <em>red</em>, <em>green</em> and <em>blue</em> will be between 1 and 1,000,000, inclusive.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>[1, 1, 1],<br />[1, 1, 1],<br />[1, 1, 1]</c></p>
+
+<h4>Output</h4>
+
+<p><c>6</c></p>
+
+<h4>Reason</h4>
+
+<p>One way to separate the balls in six operations is as follows:
+Move a red ball from box 1 to box 0.
+Move a red ball from box 2 to box 0.
+Move a green ball from box 0 to box 1.
+Move a green ball from box 2 to box 1.
+Move a blue ball from box 0 to box 2.
+Move a blue ball from box 1 to box 2.
+The pictures on the left and on the right show the initial and the final states of the balls, respectively.</p>
+
+<p><img src="images/pic1.png" alt="image" /></p>
+
+<p><img src="images/pic2.png" alt="image" /></p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>[5],<br />[6],<br />[8]</c></p>
+
+<h4>Output</h4>
+
+<p><c>-1</c></p>
+
+<h4>Reason</h4>
+
+<p>It is impossible to separate the balls.</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>[4, 6, 5, 7],<br />[7, 4, 6, 3],<br />[6, 5, 3, 8]</c></p>
+
+<h4>Output</h4>
+
+<p><c>37</c></p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>[7, 12, 9, 9, 7],<br />[7, 10, 8, 8, 9],<br />[8, 9, 5, 6, 13]</c></p>
+
+<h4>Output</h4>
+
+<p><c>77</c></p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>[842398, 491273, 958925, 849859, 771363, 67803, 184892, 391907, 256150, 75799],<br />[268944, 342402, 894352, 228640, 903885, 908656, 414271, 292588, 852057, 889141],<br />[662939, 340220, 600081, 390298, 376707, 372199, 435097, 40266, 145590, 505103]</c></p>
+
+<h4>Output</h4>
+
+<p><c>7230607</c></p>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<html>
+<head>
+    <title>FoxAndMountain</title>
+</head>
+<body>
+<h1><a href="http://community.topcoder.com/tc?module=ProblemDetail&amp;rd=15179&amp;pm=11810">FoxAndMountain</a></h1>
+
+<p><em>Single Round Match 557 Round 1 - Division II, Level Three</em></p>
+
+<h2>Statement</h2>
+
+<p>Fox Ciel lives in a beautiful countryside.
+She loves climbing mountains.
+Yesterday, she went hiking in the mountains.</p>
+
+<p>Her trip can be described as a sequence of (n+1) integers: h[0], h[1], ..., h[<em>n</em>].
+These values represent altitudes visited by Fox Ciel during the trip, in order.
+Fox Ciel does not remember the precise sequence, but she remembers the following:
+for each i, h[i] >= 0
+h[0] = 0
+h[<em>n</em>] = 0
+for each i, abs(h[i+1]-h[i]) = 1</p>
+
+<p>The last condition means that in each step the altitude of Fox Ciel either increased by 1, or decreased by 1.
+We will call the two types of steps "steps up" and "steps down", respectively.
+Steps up will be denoted 'U' and steps down will be denoted 'D'.</p>
+
+<p>You are given the int <em>n</em>: the length of the trip.
+In addition to the length, Fox Ciel remembers some contiguous segment of her trip.
+You are given this segment as a String <em>history</em>.
+Each character of <em>history</em> is either 'U' or 'D'.</p>
+
+<p>Let X be the number of different trips that match everything that Fox Ciel remembers.
+(Note that she may be mistaken, hence X may also be zero.)
+Compute and return the value (X modulo 1,000,000,009).</p>
+
+<h2>Definitions</h2>
+
+<ul>
+<li><em>Class</em>: <code>FoxAndMountain</code></li>
+<li><em>Method</em>: <code>count</code></li>
+<li><em>Parameters</em>: <code>int, String</code></li>
+<li><em>Returns</em>: <code>int</code></li>
+<li><em>Method signature</em>: <code>int count(int n, String history)</code></li>
+</ul>
+
+
+<h2>Constraints</h2>
+
+<ul>
+<li><em>n</em> will be between 1 and 50, inclusive.</li>
+<li><em>history</em> will contain between 1 and <em>n</em> characters, inclusive.</li>
+<li>Each character in <em>history</em> will be either 'U' or 'D'.</li>
+</ul>
+
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<h4>Input</h4>
+
+<p><c>4,<br />"UUDD"</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>Fox Ciel remembers the entire history of her trip. The corresponding sequence of altitudes is {0, 1, 2, 1 ,0}.</p>
+
+<h3>Example 2</h3>
+
+<h4>Input</h4>
+
+<p><c>4,<br />"DUUD"</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h4>Reason</h4>
+
+<p>Fox Ciel is mistaken.
+As <em>n</em>=4 and <em>history</em>="DUUD", the corresponding sequence of altitudes has to be {0, -1, 0, 1, 0}.
+However, all altitudes must be non-negative, so there is no matching trip.</p>
+
+<h3>Example 3</h3>
+
+<h4>Input</h4>
+
+<p><c>4,<br />"UU"</c></p>
+
+<h4>Output</h4>
+
+<p><c>1</c></p>
+
+<h4>Reason</h4>
+
+<p>The complete history must be "UUDD".</p>
+
+<h3>Example 4</h3>
+
+<h4>Input</h4>
+
+<p><c>49,<br />"U"</c></p>
+
+<h4>Output</h4>
+
+<p><c>0</c></p>
+
+<h4>Reason</h4>
+
+<p>It is not hard to see that for an odd <em>n</em> the answer has to be 0.</p>
+
+<h3>Example 5</h3>
+
+<h4>Input</h4>
+
+<p><c>20,<br />"UUUDUUU"</c></p>
+
+<h4>Output</h4>
+
+<p><c>990</c></p>
+
+<h3>Example 6</h3>
+
+<h4>Input</h4>
+
+<p><c>30,<br />"DUDUDUDUDUDUDUDU"</c></p>
+
+<h4>Output</h4>
+
+<p><c>3718</c></p>
+
+<h3>Example 7</h3>
+
+<h4>Input</h4>
+
+<p><c>50,<br />"U"</c></p>
+
+<h4>Output</h4>
+
+<p><c>946357703</c></p>
+
+<h4>Reason</h4>
+
+<p>Don't forget to use the modulo operations during the calculation.</p>
+
+</body>
+</html>
