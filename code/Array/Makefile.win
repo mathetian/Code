@@ -1,0 +1,12 @@
+CFLAGS = /nologo /MT /W3 /EHsc /O2 
+
+LDFLAGS = /DYNAMICBASE "libeay32.lib" "ssleay32.lib" "kernel32.lib" "user32.lib" "gdi32.lib"  "advapi32.lib" 
+
+PROGS = "find-the-longest-running-sequence-of-a-character-among-all-possible-permutations-of-the-strings-in-the-array.cpp"
+
+all: $(PROGS)
+        cl $(CFLAGS)   $**      \
+        /link /out:$@.exe
+
+clean:
+        del *.obj *.exe
